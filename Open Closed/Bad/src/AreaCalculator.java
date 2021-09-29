@@ -2,30 +2,31 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class AreaCalculator {
-    private List<IShape> shapes;
+  private List<Rectangle> rectangles;
+  private List<Triangle> triangles;
 
-    public AreaCalculator() {
-        shapes = new ArrayList<IShape>();
-    }
+  public AreaCalculator() {
+    rectangles = new ArrayList<Rectangle>();
+    triangles = new ArrayList<Triangle>();
+  }
 
-    public void addShape(IShape shape) {
-        shapes.add(shape);
-    }
+  public void addRectangle(Rectangle rectangle) {
+    rectangles.add(rectangle);
+  }
 
-    public float getTotalArea() {
-        float area = 0;
+  public void addTriangle(Triangle triangle) {
+    triangles.add(triangle);
+  }
 
-        for(IShape shape : shapes) {
-            if(shape instanceOf Rectangle) {
-                area += shape.getLength() * shape.getWidth();
-            }
-            else if(shape instanceOf Triangle) {
-                area += 0.5 * shape.getBase() * shape.getHeight();
-            }
-            else {
-                System.out.println("Unable to get area for :" + shape.getClass());
-            }
-        }
+  public float getTotalArea() {
+    float area = 0;
 
-    }
+    for(Rectangle rectangle : rectangles)
+      area += rectangle.getLength() * rectangle.getWidth();
+
+    for(Triangle triangle : triangles)
+      area += 0.5 * triangle.getBase() * triangle.getHeight();
+
+    return area;
+  }
 }

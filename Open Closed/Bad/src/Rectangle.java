@@ -1,25 +1,25 @@
-public class Rectangle implements IShape {
-    private int length;
-    private int width;
+public class Rectangle {
+  private int length;
+  private int width;
 
-    public Rectangle(int length, int width) {
-        setLength(length);
-        setWidth(width);
-    }
+  public Rectangle(int length, int width) {
+    setLength(length);
+    setWidth(width);
+  }
 
-    public void setLength(int length) {
-        this.length = length;
-    }
+  public void setLength(int length) {
+    this.length = length;
+  }
 
-    public int getLength() {
-        return length;
-    }
+  public int getLength() {
+    return length;
+  }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
+  public void setWidth(int width) {
+    this.width = width;
+  }
 
-    public int getWidth() {
-        return width;
-    }
+  public int getWidth() {
+    return width;
+  }
 }
